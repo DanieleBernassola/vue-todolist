@@ -3,10 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Todo List</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <!-- APP VUE -->
+    <div id="app" v-cloak>
+      <!-- LISTA DI TODO -->
+      <ul class="list">
+        <!-- CREO TUTTI I TODO CON UN V-FOR E SE DONE è TRUE AGGIUNGO LA CLASSE DONE -->
+        <li
+          class="item"
+          :class="{done: item.done}"
+          v-for="(item, index) in toDoList"
+        >
+          <p>{{ item.text }}</p>
+        </li>
+      </ul>
+    </div>
+    <!-- VUE -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- JS -->
     <script src="./js/main.js"></script>
   </body>
