@@ -17,7 +17,11 @@
           :class="{done: item.done}"
           v-for="(item, index) in toDoList"
         >
-          <p>{{ item.text }}</p>
+          <p>
+            <!-- SPAN CON UNA X CHE RIMUOVE ELEMENTO DALLA LISTA -->
+            <span class="remove" @click="removeItem(index)">&#10060; </span>
+            {{ item.text }}
+          </p>
         </li>
       </ul>
     </div>

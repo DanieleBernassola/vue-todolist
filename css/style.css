@@ -13,6 +13,14 @@
   margin-left: 1rem;
 }
 
+.item {
+  display: flex;
+}
+
 .done {
   text-decoration: line-through;
+}
+
+.remove {
+  cursor: pointer;
 }
