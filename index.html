@@ -9,6 +9,15 @@
   <body>
     <!-- APP VUE -->
     <div id="app" v-cloak>
+      <div>
+        <!-- Aggiungo v-model all'input per collegarlo alla variabile newToDo -->
+        <input
+          type="text"
+          v-model="newToDo"
+          placeholder="Aggiungi un todo..."
+        />
+        <button class="btn" @click="addItem()">Aggiungi</button>
+      </div>
       <!-- LISTA DI TODO -->
       <ul class="list">
         <!-- CREO TUTTI I TODO CON UN V-FOR E SE DONE è TRUE AGGIUNGO LA CLASSE DONE -->
